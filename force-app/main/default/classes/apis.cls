@@ -25,7 +25,9 @@ global with sharing class apis {
                         FROM Account
                         WHERE Industry = :IndustryName];
         return result;
+
     }
+    
    /* @HttpPatch
     global static String changeIndustry(String id)
     {
