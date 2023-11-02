@@ -13,7 +13,8 @@ global with sharing class allAPIS {
           request.requestURI.lastIndexOf('/')+1);
         Case result =  [SELECT CaseNumber,Subject,Status,Origin,Priority
                         FROM Case
-                        WHERE Id = :caseId];
+                        WHERE Id = :caseId
+                        limit 5];
         return result;
     }
     
