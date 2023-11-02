@@ -28,7 +28,7 @@ global class AccountUpdate implements Database.Batchable {
           for(Account a: scope){
                a.Name += ' Updated';
           }
-          update scope;
+          upsert scope;
      }
      global void finish(Database.BatchableContext BC){}
 
